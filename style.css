@@ -1,3 +1,4 @@
+
 :root {
 
     --color-primary: #1e70bf;
@@ -52,4 +53,319 @@ main {
 a {
     text-decoration: none;
     color: var(--color-primary);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium);
+}
+
+.section {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-large);
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+
+.header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 8px var(--color-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-medium);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li a {
+    padding: var(--spacing-small) var(--spacing-medium);
+    font-weight: 500;
+    color: var(--color-text);
+    transition: var(--transition-default);
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+    color: var(--color-primary);
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: var(--spacing-small);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.button.primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.button.secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.button:hover,
+.button:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px var(--color-shadow);
+    opacity: 0.95;
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.cta-links {
+    margin-top: var(--spacing-medium);
+}
+
+/*sobre*/
+
+.about {
+    background-color: var(--color-white);
+    padding: var(--spacing-xl) 0 100px;
+    text-align: left;
+}
+
+.about article {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-medium);
+    line-height: 1.2;
+    color: var(--color-primary);
+}
+
+.about p {
+    font-size: 1.15rem;
+    margin-bottom: var(--spacing-medium);
+    color: var(--color-secondary);
+    text-align: justify;
+}
+
+/*projects*/
+
+.projects {
+    background-color: var(--color-background);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-medium);
+    margin-top: var(--spacing-large);
+    text-align: left;
+}
+
+.project-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--color-shadow);
+    border-top: 5px solid var(--color-primary);
+    transition: var(--transition-default);
+}
+
+.project-card:hover,
+.project-card:focus-within {
+    box-shadow: 0 10px 20px var(--color-shadow);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.project-title {
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-small);
+    color: var(--color-primary);
+}
+
+.project-description {
+    margin-bottom: var(--spacing-medium);
+}
+
+.project-link {
+    display: inline-block;
+    font-weight: 700;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition-default);
+}
+
+.project-link:hover,
+.project-link:focus {
+    color: var(--color-secondary);
+    border-bottom-color: var(--color-secondary);
+    outline: none;
+}
+
+/*contato*/
+
+.contact {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.contact .section-title,
+.contact p {
+    color: var(--color-white);
+}
+
+.contact p {
+    font-size: 1.1rem;
+}
+
+.contact-links {
+    margin-top: var(--spacing-large);
+}
+
+.contact-links .button.primary {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+}
+
+.contact-links .button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+}
+
+.contact-links .button.primary:hover,
+.contact-links .button.primary:focus {
+    background-color: #eee;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+}
+
+.contact-links .button.secondary:hover,
+.contact-links .button.secondary:focus {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+
+.footer {
+    background-color: #222;
+    color: #bbb;
+    padding: var(--spacing-medium) 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/*mobile*/
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: var(--spacing-large) 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: var(--spacing-small);
+        width: 100%;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list li a {
+        padding: var(--spacing-small);
+        border-bottom: 1px solid #eee;
+    }
+
+    .about h2 {
+        font-size: 2.2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-links,
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+/*ultrawide*/
+
+@media (min-width: 1600px) {
+    body {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        max-width: 1600px;
+        padding: 0 var(--spacing-large);
+    }
+}
+
+@media (min-width: 2560px) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 3.8rem;
+    }
+
+    .about h2 {
+        font-size: 4.5rem;
+    }
+
+    .about p {
+        font-size: 1.5rem;
+    }
 }
