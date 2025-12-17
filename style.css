@@ -1,1 +1,55 @@
-"" 
+:root {
+
+    --color-primary: #1e70bf;
+    --color-secondary: #3c4858;
+    --color-text: #333;
+    --color-background: #f4f6f9;
+    --color-white: #ffffff;
+    --color-shadow: rgba(0, 0, 0, 0.15);
+
+
+    --font-family-primary: 'Roboto', sans-serif;
+    --font-base-size: 16px;
+
+
+    --spacing-xs: 5px;
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 40px;
+    --spacing-xl: 80px;
+
+
+    --transition-speed: 0.3s;
+    --transition-default: all 0.3s ease;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-base-size);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
