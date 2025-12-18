@@ -372,17 +372,17 @@
 /*telas muito pequenas*/
 @media (max-width: 320px) {
     :root {
-        --spacing-medium: 12px; /* Reduzi um pouco mais para ganhar espaço */
+        --spacing-medium: 12px; 
     }
 
-    /* Força o container a não ter margens exageradas em telas minúsculas */
+   
     .container {
         padding: 0 10px; 
         width: 100%;
         box-sizing: border-box;
     }
 
-    /* Redução estratégica de fontes para evitar quebra de layout */
+    
     .logo {
         font-size: 1.1rem; 
         max-width: 100%;
@@ -400,15 +400,15 @@
     .about p {
         font-size: 0.9rem;
         text-align: left;
-        hyphens: auto; /* Ajuda a separar palavras longas se necessário */
+        hyphens: auto; 
     }
 
-    /* Botões em 250px precisam de cuidado com o padding lateral */
+    
     .button {
         width: 100%; 
         display: block;
-        padding: 10px 5px; /* Padding lateral menor */
-        font-size: 0.8rem;
+        padding: 10px 5px; 
+        font-size: 0.6rem;
         box-sizing: border-box;
     }
 
@@ -421,6 +421,6 @@
     h1, h2, h3, p, a {
         overflow-wrap: break-word;
         word-wrap: break-word;
-        word-break: break-word; /* Força a quebra em casos extremos */
+        word-break: break-word; 
     }
 }
