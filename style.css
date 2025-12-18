@@ -402,7 +402,12 @@
         text-align: left;
         hyphens: auto; 
     }
-
+    .project-title {
+        font-size: 1.1rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
     
     .button {
         width: 100%; 
@@ -412,7 +417,7 @@
         box-sizing: border-box;
     }
 
-    /* Garante que nada transborde a largura da tela */
+   
     * {
         max-width: 100%;
         box-sizing: border-box;
