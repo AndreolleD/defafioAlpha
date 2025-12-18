@@ -372,48 +372,55 @@
 /*telas muito pequenas*/
 @media (max-width: 320px) {
     :root {
-        --spacing-medium: 15px; 
+        --spacing-medium: 12px; /* Reduzi um pouco mais para ganhar espaço */
     }
 
+    /* Força o container a não ter margens exageradas em telas minúsculas */
     .container {
-        padding: 0 var(--spacing-small);
+        padding: 0 10px; 
+        width: 100%;
+        box-sizing: border-box;
     }
 
+    /* Redução estratégica de fontes para evitar quebra de layout */
     .logo {
-        font-size: 1.3rem; 
+        font-size: 1.1rem; 
+        max-width: 100%;
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .about h2 {
-        font-size: 1.4rem;
-        word-wrap: break-word; 
+        font-size: 1.2rem;
+        line-height: 1.2;
     }
 
     .about p {
-        font-size: 0.95rem;
-        text-align: left; 
+        font-size: 0.9rem;
+        text-align: left;
+        hyphens: auto; /* Ajuda a separar palavras longas se necessário */
     }
 
+    /* Botões em 250px precisam de cuidado com o padding lateral */
     .button {
         width: 100%; 
-        margin: 5px 0;
-        padding: 10px;
-        font-size: 0.85rem;
+        display: block;
+        padding: 10px 5px; /* Padding lateral menor */
+        font-size: 0.8rem;
+        box-sizing: border-box;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr; 
-    }
-
-    .project-card {
-        padding: var(--spacing-small);
+    /* Garante que nada transborde a largura da tela */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     h1, h2, h3, p, a {
         overflow-wrap: break-word;
         word-wrap: break-word;
+        word-break: break-word; /* Força a quebra em casos extremos */
     }
 }
